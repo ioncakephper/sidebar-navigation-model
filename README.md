@@ -1,1 +1,2 @@
-# sidebar-navigation-model
+# Sidebar Navigation Model
+
