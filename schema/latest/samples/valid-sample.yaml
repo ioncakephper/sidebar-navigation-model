@@ -1,0 +1,44 @@
+sidebars:
+  - "StartHere"  # visibleString
+
+  - label: IntroSidebar
+    items: []  # emptySidebar
+
+  - label: DevResources
+    items:
+      - "Overview"  # visibleString
+      - label: ExternalDocs
+        href: "https://example.com/docs"  # linkItem
+      - label: Tooling
+        items: []  # topicItem
+        headings:
+          - "QuickStart"
+          - label: SetupGuide
+            items: []  # leafHeading
+          - label: DeepDive
+            items:      # parentHeading
+              - "Performance Tips"
+              - label: Optimization
+                items: []
+              - label: Advanced Flow
+                items:
+                  - "Caching Strategies"
+                  - label: MicroTweaks
+                    items: []
+      - label: DevCategories
+        items:         # categoryItem
+          - "Basics"
+          - label: API Guide
+            href: "https://example.com/api"
+          - label: SubTopics
+            headings:
+              - label: Structure
+                items: []  # leafHeading
+              - label: Depth
+                items:      # parentHeading
+                  - label: Layers
+                    items:
+                      - "Stacking"
+                      - label: FinalLeaf
+                        items: []
+         

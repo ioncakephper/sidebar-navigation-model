@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sidebar Navigation Model",
+  "version": "v1.0.0",
+  "description": "Schema defining nested navigational structures with reusable sidebar components and metadata.",
+  "type": "object",
+  "properties": {
+    "sidebars": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "anyOf": [
+          { "$ref": "#/$defs/visibleString" },
+          { "$ref": "#/$defs/emptySidebar" },
+          { "$ref": "#/$defs/populatedSidebar" }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "visibleString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[\\S]+$"
+    },
+    "labelledObject": {
+      "type": "object",
+      "properties": {
+        "label": { "$ref": "#/$defs/visibleString" }
+      },
+      "required": ["label"]
+    },
+    "commonMeta": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "summary":     { "type": "string" },
+        "brief":       { "type": "string" },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9._-]+$"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(/)?([^/ ]+(/)?)*$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "emptySidebar": {
+      "allOf": [
+        { "$ref": "#/$defs/labelledObject" },
+        { "$ref": "#/$defs/commonMeta" },
+        {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "maxItems": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "leafHeading": {
+      "allOf": [
+        { "$ref": "#/$defs/labelledObject" },
+        { "$ref": "#/$defs/commonMeta" },
+        {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "maxItems": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "parentHeading": {
+      "allOf": [
+        { "$ref": "#/$defs/labelledObject" },
+        { "$ref": "#/$defs/commonMeta" },
+        {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "anyOf": [
+                  { "$ref": "#/$defs/visibleString" },
+                  { "$ref": "#/$defs/parentHeading" },
+                  { "$ref": "#/$defs/leafHeading" }
+                ]
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "topicItem": {
+      "allOf": [
+        { "$ref": "#/$defs/emptySidebar" },
+        {
+          "type": "object",
+          "properties": {
+            "headings": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "anyOf": [
+                  { "$ref": "#/$defs/visibleString" },
+                  { "$ref": "#/$defs/leafHeading" },
+                  { "$ref": "#/$defs/parentHeading" }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "linkItem": {
+      "allOf": [
+        { "$ref": "#/$defs/labelledObject" },
+        { "$ref": "#/$defs/commonMeta" },
+        {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": ["href"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "categoryItem": {
+      "allOf": [
+        { "$ref": "#/$defs/labelledObject" },
+        { "$ref": "#/$defs/commonMeta" },
+        {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "anyOf": [
+                  { "$ref": "#/$defs/visibleString" },
+                  { "$ref": "#/$defs/linkItem" },
+                  { "$ref": "#/$defs/topicItem" },
+                  { "$ref": "#/$defs/categoryItem" }
+                ]
+              }
+            }
+          },
+          "required": ["items"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "populatedSidebar": {
+      "allOf": [
+        { "$ref": "#/$defs/labelledObject" },
+        { "$ref": "#/$defs/commonMeta" },
+        {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "anyOf": [
+                  { "$ref": "#/$defs/visibleString" },
+                  { "$ref": "#/$defs/topicItem" },
+                  { "$ref": "#/$defs/categoryItem" },
+                  { "$ref": "#/$defs/linkItem" }
+                ]
+              }
+            }
+          },
+          "required": ["items"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
