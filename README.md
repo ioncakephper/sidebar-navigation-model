@@ -81,13 +81,16 @@ We follow [Semantic Versioning](https://semver.org/) for schema releases. Refer 
 
 ## 🤝 Contributing
 
-Want to improve definitions, suggest enhancements, or add examples? Feel free to submit an issue or open a pull request.
+Contributions are welcome! For details on how to get started, please read our [contributing guide](CONTRIBUTING.md).
 
 ---
 
 ## 📬 Questions or Feedback?
 
-Open an issue or connect with the maintainer. Contributions and collaboration are warmly welcomed.
+Have a question or feedback? Please use one of the following channels:
+
+- **[GitHub Issues](https://github.com/ioncakephper/sidebar-navigation-model/issues):** For bug reports and feature requests.
+- **[GitHub Discussions](https://github.com/ioncakephper/sidebar-navigation-model/discussions):** For questions, ideas, and general feedback.
 
 ---
 
