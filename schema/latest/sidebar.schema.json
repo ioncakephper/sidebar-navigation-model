@@ -37,6 +37,7 @@
         "description": { "type": "string" },
         "summary":     { "type": "string" },
         "brief":       { "type": "string" },
+        "title":       { "type": "string" },
         "id": {
           "type": "string",
           "pattern": "^[a-zA-Z0-9._-]+$"
