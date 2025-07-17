@@ -31,12 +31,12 @@ Represents any object with a human-readable label.
 Provides standard metadata applicable to most sidebar components.
 
 - **Properties**:
-  - `description`: Optional `string`
-  - `summary`: Optional `string`
   - `brief`: Optional `string`
+  - `description`: Optional `string`
   - `id`: `string` (Pattern: `^[a-zA-Z0-9._-]+$`)
-  - `slug`: `string` (Pattern: `^[a-z0-9]+(-[a-z0-9]+)*$`)
   - `path`: `string` (Pattern: `^(/)?([^/ ]+(/)?)*$`)
+  - `slug`: `string` (Pattern: `^[a-z0-9]+(-[a-z0-9]+)*$`)
+  - `summary`: Optional `string`
   - `title`: Optional `string`
 
 - **Additional Properties**: Not allowed
