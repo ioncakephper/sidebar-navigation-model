@@ -1,0 +1,9 @@
+sidebars:
+    - docsSidebar:
+        - Getting started
+        - Building Apps:
+            - Standard Features
+            - Section: Standard Features
+            - Align with additional applications:
+                - Customization
+                - Integration
