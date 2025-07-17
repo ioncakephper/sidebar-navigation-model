@@ -1,6 +1,6 @@
 {
   "name": "sidebar-navigation-model",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A modular and extensible JSON Schema for defining hierarchical sidebar navigation structures in content platforms, documentation tools, and UI frameworks.",
   "main": "index.js",
   "directories": {
