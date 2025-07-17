@@ -4,20 +4,27 @@
   "version": "v1.0.0",
   "description": "Schema defining nested navigational structures with reusable sidebar components and metadata.",
   "type": "object",
-  "properties": {
-    "sidebars": {
-      "type": "array",
-      "minItems": 0,
-      "items": {
-        "anyOf": [
-          { "$ref": "#/$defs/visibleString" },
-          { "$ref": "#/$defs/emptySidebar" },
-          { "$ref": "#/$defs/populatedSidebar" }
-        ]
-      }
+  "allOf": [
+    { "$ref": "#/$defs/commonMeta" },
+    {
+      "type": "object",
+      "properties": {
+        "sidebars": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "anyOf": [
+              { "$ref": "#/$defs/visibleString" },
+              { "$ref": "#/$defs/emptySidebar" },
+              { "$ref": "#/$defs/populatedSidebar" }
+            ]
+          }
+        }
+      },
+      "required": ["sidebars"],
+      "additionalProperties": false
     }
-  },
-  "additionalProperties": false,
+  ],
   "$defs": {
     "visibleString": {
       "type": "string",

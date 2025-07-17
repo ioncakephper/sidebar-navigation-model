@@ -24,18 +24,23 @@ Whether you’re building a static site generator, documentation renderer, or a 
 .
 ├── README.md
 ├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
 ├── schema/
 │   ├── v1.0.0/
 │   │   ├── sidebar.schema.json
 │   │   └── samples/
-│   │       └── example.yaml
+│   │       ├── meta-valid-sample.yaml
+│   │       └── valid-sample.yaml
 │   └── latest/
 │       ├── sidebar.schema.json
 │       └── samples/
-│           └── example.yaml
+│           ├── meta-valid-sample.yaml
+│           └── valid-sample.yaml
 ├── docs/
 │   ├── definitions.md
-│   ├── integrations-guide.md
+│   ├── integration-guide.md
 │   └── overview.md
 ```
 
@@ -69,7 +74,7 @@ Explore:
 
 - [`overview.md`](./docs/overview.md): High-level schema purpose and structure
 - [`definitions.md`](./docs/definitions.md): Breakdown of reusable components
-- [`integrations-guide.md`](./docs/integrations-guide.md): How to integrate with static site generators or client apps
+- [`integration-guide.md`](./docs/integration-guide.md): How to integrate with static site generators or client apps
 
 ---
 
@@ -81,7 +86,7 @@ We follow [Semantic Versioning](https://semver.org/) for schema releases. Refer 
 
 ## 🤝 Contributing
 
-Contributions are welcome! For details on how to get started, please read our [contributing guide](CONTRIBUTING.md).
+Contributions are welcome! See our [contributing guide](CONTRIBUTING.md) to get started.
 
 ---
 
@@ -96,6 +101,6 @@ Have a question or feedback? Please use one of the following channels:
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE). Use it freely in commercial and open source projects.
+Released under the [MIT License](LICENSE). Use it freely in commercial and open-source projects.
 
 ---

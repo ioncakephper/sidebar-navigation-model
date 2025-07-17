@@ -1,0 +1,120 @@
+description: Full sample of a sidebar navigation config
+summary: Demonstrates all supported structures
+brief: Nested and linked documentation config
+title: Full Navigation Example
+id: sidebar-v1
+slug: sidebar-navigation
+path: /docs/navigation
+
+sidebars:
+  - "intro"  # visibleString
+  - label: "Getting Started"
+    description: Basic onboarding section
+    summary: For new users
+    brief: Welcome and install info
+    title: Getting Started
+    id: start-here
+    slug: getting-started
+    path: /docs/start
+    items: []  # emptySidebar
+
+  - label: "Advanced Guides"
+    description: Deep dive tutorials
+    summary: Configuration and usage scenarios
+    brief: For power users
+    title: Advanced Guides
+    id: advanced-section
+    slug: advanced-guides
+    path: /docs/advanced
+    items:
+      - label: "Configuration"
+        description: Setup options
+        summary: Customize settings
+        brief: UI and backend tweaks
+        title: Config
+        id: cfg-options
+        slug: config
+        path: /docs/advanced/config
+        items: []  # leafHeading
+
+      - label: "Features"
+        description: All feature sets
+        summary: Component overview
+        brief: Widget and module functionality
+        title: Feature List
+        id: feat-list
+        slug: features
+        path: /docs/advanced/features
+        items:
+          - "feature-auth"
+          - "feature-theme"
+
+      - label: "API Reference"
+        description: REST & GraphQL APIs
+        summary: All available endpoints
+        brief: Integrate with services
+        title: API Docs
+        id: api-ref
+        slug: api
+        path: /docs/advanced/api
+        items:
+          - label: "Authentication"
+            description: Login and token flow
+            summary: Secure access
+            brief: OAuth, API keys
+            title: Auth
+            id: api-auth
+            slug: authentication
+            path: /docs/advanced/api/auth
+            items: []  # leafHeading
+
+          - label: "Endpoints"
+            description: CRUD operations
+            summary: RESTful routes
+            brief: Create, Read, Update, Delete
+            title: Endpoints
+            id: api-endpoints
+            slug: endpoints
+            path: /docs/advanced/api/endpoints
+            items:
+              - "getUser"
+              - "createPost"
+
+      - label: "Resources"
+        description: External and internal links
+        summary: Useful materials
+        brief: Docs and guides
+        title: Resources
+        id: res-section
+        slug: resources
+        path: /docs/advanced/resources
+        items:
+          - label: "Official Site"
+            description: Homepage
+            summary: Visit the platform
+            brief: External link
+            title: Main Site
+            id: site-link
+            slug: official-site
+            path: /external
+            href: https://example.com
+
+          - label: "SDK Docs"
+            description: Developer guide
+            summary: SDK usage
+            brief: Setup and methods
+            title: SDK Reference
+            id: sdk-docs
+            slug: sdk
+            path: /external/sdk
+            href: https://example.com/sdk
+
+          - label: "Community Forum"
+            description: Ask questions
+            summary: Chat with others
+            brief: Get support
+            title: Forum
+            id: forum-link
+            slug: community
+            path: /external/forum
+            href: https://community.example.com
