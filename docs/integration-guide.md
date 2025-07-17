@@ -62,7 +62,7 @@ Use a JSON Schema validator to ensure your sidebar file conforms to the schema. 
 - [jsonschema (Python)](https://python-jsonschema.readthedocs.io/)
 - [YAML Validator](https://www.jsonschemavalidator.net/)
 
-### Example (AJV):
+### Example (AJV)
 
 ```js
 const Ajv = require('ajv');
