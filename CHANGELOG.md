@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](https://semver.org/) and follows c
 🎉 Released: YYYY-MM-DD
 
 ### ✨ Features
+
 - Defined `sidebars` as an array of entries: `visibleString`, `emptySidebar`, and `populatedSidebar`
 - Modular structure using `$defs` and `allOf` composition
 - Component definitions:
@@ -29,9 +30,11 @@ This project adheres to [Semantic Versioning](https://semver.org/) and follows c
 
 ✅ Next Version Preview (`v1.1.0`)
 > Planned improvements:
+
 - Add `autoLabel: boolean` toggle in `commonMeta`
 - Expand validation utilities (`validate.sh`, `validate.js`)
 - Embed default `label` inference based on path/slug
 
 ---
-```
+
+

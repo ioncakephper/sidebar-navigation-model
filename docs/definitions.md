@@ -7,6 +7,7 @@ This document outlines the definitions used in the Sidebar Navigation JSON Schem
 ## 🧠 Core Definitions
 
 ### `visibleString`
+
 A basic string type used for labels and identifiers.
 
 - **Type**: `string`
@@ -16,6 +17,7 @@ A basic string type used for labels and identifiers.
 ---
 
 ### `labelledObject`
+
 Represents any object with a human-readable label.
 
 - **Properties**:
@@ -25,6 +27,7 @@ Represents any object with a human-readable label.
 ---
 
 ### `commonMeta`
+
 Provides standard metadata applicable to most sidebar components.
 
 - **Properties**:
@@ -34,6 +37,8 @@ Provides standard metadata applicable to most sidebar components.
   - `id`: `string` (Pattern: `^[a-zA-Z0-9._-]+$`)
   - `slug`: `string` (Pattern: `^[a-z0-9]+(-[a-z0-9]+)*$`)
   - `path`: `string` (Pattern: `^(/)?([^/ ]+(/)?)*$`)
+  - `title`: Optional `string`
+
 - **Additional Properties**: Not allowed
 
 ---
@@ -41,6 +46,7 @@ Provides standard metadata applicable to most sidebar components.
 ## 📦 Sidebar Types
 
 ### `emptySidebar`
+
 An empty navigational group.
 
 - Inherits:
@@ -51,6 +57,7 @@ An empty navigational group.
 ---
 
 ### `populatedSidebar`
+
 A sidebar containing actual navigation elements.
 
 - Inherits:
@@ -66,6 +73,7 @@ A sidebar containing actual navigation elements.
 ---
 
 ### `leafHeading` and `parentHeading`
+
 Define headings within documents.
 
 - Inherit:
@@ -79,6 +87,7 @@ Define headings within documents.
 ---
 
 ### `topicItem`
+
 A documentation topic block.
 
 - Inherits: `emptySidebar`
@@ -88,6 +97,7 @@ A documentation topic block.
 ---
 
 ### `linkItem`
+
 Defines external/internal hyperlinks.
 
 - Inherits:
@@ -100,6 +110,7 @@ Defines external/internal hyperlinks.
 ---
 
 ### `categoryItem`
+
 Nested category container.
 
 - Inherits:
