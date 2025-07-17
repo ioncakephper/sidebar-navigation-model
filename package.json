@@ -1,0 +1,19 @@
+{
+  "name": "sidebar-navigation-model",
+  "version": "1.0.0",
+  "description": "A modular and extensible JSON Schema for defining hierarchical sidebar navigation structures in content platforms, documentation tools, and UI frameworks.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ioncakephper",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "yaml": "^2.3.4",
+    "prettier": "^3.2.5"
+  }
+}
