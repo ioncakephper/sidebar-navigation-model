@@ -16,7 +16,11 @@ async function formatMarkdown(content) {
       plugins: [prettierPluginMarkdown, prettierPluginEstree, prettierPluginYaml],
     });
   } catch (error) {
-    console.error('Error formatting Markdown:', error);
+    console.error('Error formatting Markdown:', {  
+        error,  
+        contentPreview: content.substring(0, 100), // First 100 chars for context  
+        contentLength: content.length  
+    });
     return content; // Return original content if formatting fails
   }
 }
